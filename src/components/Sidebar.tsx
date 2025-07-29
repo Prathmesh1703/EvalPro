@@ -48,27 +48,27 @@ const Sidebar: React.FC = () => {
   const isActive = (path: string) => location.pathname === path;
 
   return (
-    <aside className="hidden lg:flex lg:flex-col lg:w-64 lg:fixed lg:inset-y-0 lg:z-50 lg:pt-16">
-      <div className="flex grow flex-col overflow-y-auto border-r bg-background px-6 pb-4">
+    <aside className="hidden lg:flex lg:flex-col lg:w-64 lg:fixed lg:inset-y-0 lg:z-40 lg:pt-16">
+      <div className="flex grow flex-col overflow-y-auto border-r bg-background px-4 lg:px-6 pb-4">
         <nav className="flex flex-1 flex-col space-y-1 pt-6">
           {navigation.map((item) => (
             <div key={item.name}>
               {item.children ? (
                 <div className="space-y-1">
-                  <div className="flex items-center space-x-3 rounded-md px-2 py-2 text-sm font-medium text-muted-foreground">
+                  <div className="flex items-center space-x-3 rounded-md px-2 py-2 text-sm font-medium text-foreground/70">
                     <item.icon className="h-5 w-5" />
                     <span>{item.name}</span>
                   </div>
-                  <div className="ml-8 space-y-1">
+                  <div className="ml-6 lg:ml-8 space-y-1">
                     {item.children.map((child) => (
                       <Link
                         key={child.name}
                         to={child.href}
                         className={cn(
-                          "block rounded-md px-2 py-2 text-sm font-medium transition-colors",
+                          "block rounded-md px-2 py-2 text-sm font-medium transition-colors w-full",
                           isActive(child.href)
                             ? "bg-primary text-primary-foreground"
-                            : "text-muted-foreground hover:bg-muted hover:text-foreground"
+                            : "text-foreground/70 hover:bg-muted hover:text-foreground"
                         )}
                       >
                         {child.name}
@@ -80,10 +80,10 @@ const Sidebar: React.FC = () => {
                 <Link
                   to={item.href}
                   className={cn(
-                    "flex items-center space-x-3 rounded-md px-2 py-2 text-sm font-medium transition-colors",
+                    "flex items-center space-x-3 rounded-md px-2 py-2 text-sm font-medium transition-colors w-full",
                     isActive(item.href)
                       ? "bg-primary text-primary-foreground"
-                      : "text-muted-foreground hover:bg-muted hover:text-foreground"
+                      : "text-foreground/70 hover:bg-muted hover:text-foreground"
                   )}
                 >
                   <item.icon className="h-5 w-5" />

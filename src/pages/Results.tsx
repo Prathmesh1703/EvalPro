@@ -88,12 +88,13 @@ const Results: React.FC = () => {
   };
 
   return (
-    <Container className="py-8 lg:ml-64">
+    <div className="w-full lg:ml-64">
+      <Container className="py-6 lg:py-8">
       <div className="space-y-8">
         {/* Header */}
         <div>
-          <h1 className="text-3xl font-bold">Test Results</h1>
-          <p className="text-muted-foreground mt-2">
+          <h1 className="text-2xl lg:text-3xl font-bold text-foreground">Test Results</h1>
+          <p className="text-muted-foreground mt-2 text-sm lg:text-base">
             Track your performance and identify areas for improvement
           </p>
         </div>
@@ -272,7 +273,8 @@ const Results: React.FC = () => {
           </CardContent>
         </Card>
       </div>
-    </Container>
+      </Container>
+    </div>
   );
 };
 

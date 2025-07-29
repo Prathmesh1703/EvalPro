@@ -10,11 +10,12 @@ import { Bell, Shield, User, Palette, Globe } from 'lucide-react';
 
 const Settings: React.FC = () => {
   return (
-    <Container className="py-8 lg:ml-64">
+    <div className="w-full lg:ml-64">
+      <Container className="py-6 lg:py-8">
       <div className="space-y-8">
         <div>
-          <h1 className="text-3xl font-bold">Settings</h1>
-          <p className="text-muted-foreground mt-2">
+          <h1 className="text-2xl lg:text-3xl font-bold text-foreground">Settings</h1>
+          <p className="text-muted-foreground mt-2 text-sm lg:text-base">
             Manage your account preferences and application settings
           </p>
         </div>
@@ -281,7 +282,8 @@ const Settings: React.FC = () => {
           <Button>Save Changes</Button>
         </div>
       </div>
-    </Container>
+      </Container>
+    </div>
   );
 };
 

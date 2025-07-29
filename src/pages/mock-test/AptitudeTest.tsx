@@ -160,19 +160,20 @@ const AptitudeTest: React.FC = () => {
   }
 
   return (
-    <Container className="py-8 lg:ml-64">
+    <div className="w-full lg:ml-64">
+      <Container className="py-6 lg:py-8">
       <div className="max-w-3xl mx-auto">
         {/* Test Header */}
         <Card className="mb-6">
           <CardHeader>
-            <div className="flex items-center justify-between">
+            <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between space-y-4 sm:space-y-0">
               <div>
-                <CardTitle>Aptitude Test</CardTitle>
+                <CardTitle className="text-foreground">Aptitude Test</CardTitle>
                 <CardDescription>
                   Question {currentQuestion + 1} of {questions.length}
                 </CardDescription>
               </div>
-              <div className="flex items-center space-x-4">
+              <div className="flex flex-col sm:flex-row items-start sm:items-center space-y-2 sm:space-y-0 sm:space-x-4">
                 <div className="flex items-center space-x-2 text-sm">
                   <Clock className="h-4 w-4" />
                   <span className="font-mono">{formatTime(timeRemaining)}</span>
@@ -191,7 +192,7 @@ const AptitudeTest: React.FC = () => {
         {/* Question Card */}
         <Card className="mb-6">
           <CardHeader>
-            <CardTitle className="text-lg">
+            <CardTitle className="text-lg text-foreground">
               {questions[currentQuestion].question}
             </CardTitle>
           </CardHeader>
@@ -273,7 +274,8 @@ const AptitudeTest: React.FC = () => {
           </CardContent>
         </Card>
       </div>
-    </Container>
+      </Container>
+    </div>
   );
 };
 

@@ -35,14 +35,14 @@ const Home: React.FC = () => {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <Container className="py-24">
+      <Container className="py-12 lg:py-24">
         <div className="flex flex-col items-center justify-center text-center space-y-8">
           <div className="space-y-4">
-            <h1 className="text-4xl md:text-6xl font-bold tracking-tight">
+            <h1 className="text-3xl sm:text-4xl lg:text-6xl font-bold tracking-tight text-foreground">
               Master Your
               <span className="text-primary"> Interview Skills</span>
             </h1>
-            <p className="text-xl text-muted-foreground max-w-[600px] mx-auto">
+            <p className="text-lg lg:text-xl text-muted-foreground max-w-[600px] mx-auto px-4">
               Comprehensive candidate evaluation platform with professional assessments, 
               mock interviews, and detailed feedback to boost your career prospects.
             </p>
@@ -70,12 +70,12 @@ const Home: React.FC = () => {
       </Container>
 
       {/* Features Section */}
-      <Container className="py-24">
+      <Container className="py-12 lg:py-24">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">
+          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-4 text-foreground">
             Why Choose EvalPro?
           </h2>
-          <p className="text-xl text-muted-foreground max-w-[600px] mx-auto">
+          <p className="text-lg lg:text-xl text-muted-foreground max-w-[600px] mx-auto px-4">
             Our platform offers comprehensive preparation tools designed to help you succeed in your career journey.
           </p>
         </div>
@@ -96,13 +96,13 @@ const Home: React.FC = () => {
       </Container>
 
       {/* CTA Section */}
-      <Container className="py-24">
+      <Container className="py-12 lg:py-24">
         <Card className="border-0 bg-primary text-primary-foreground">
-          <CardContent className="p-12 text-center">
-            <h2 className="text-3xl font-bold mb-4">
+          <CardContent className="p-6 lg:p-12 text-center">
+            <h2 className="text-2xl lg:text-3xl font-bold mb-4">
               Ready to Ace Your Next Interview?
             </h2>
-            <p className="text-xl text-primary-foreground/80 mb-8 max-w-[600px] mx-auto">
+            <p className="text-lg lg:text-xl text-primary-foreground/80 mb-8 max-w-[600px] mx-auto">
               Join thousands of candidates who have improved their interview skills with our comprehensive preparation platform.
             </p>
             {!isAuthenticated && (

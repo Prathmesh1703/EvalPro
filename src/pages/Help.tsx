@@ -76,11 +76,12 @@ const Help: React.FC = () => {
   ];
 
   return (
-    <Container className="py-8 lg:ml-64">
+    <div className="w-full lg:ml-64">
+      <Container className="py-6 lg:py-8">
       <div className="space-y-8">
         <div>
-          <h1 className="text-3xl font-bold">Help Center</h1>
-          <p className="text-muted-foreground mt-2">
+          <h1 className="text-2xl lg:text-3xl font-bold text-foreground">Help Center</h1>
+          <p className="text-muted-foreground mt-2 text-sm lg:text-base">
             Find answers to common questions and get support when you need it
           </p>
         </div>
@@ -195,7 +196,8 @@ const Help: React.FC = () => {
           </CardContent>
         </Card>
       </div>
-    </Container>
+      </Container>
+    </div>
   );
 };
 

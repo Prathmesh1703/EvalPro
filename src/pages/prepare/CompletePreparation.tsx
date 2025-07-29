@@ -196,12 +196,13 @@ const CompletePreparation: React.FC = () => {
   }
 
   return (
-    <Container className="py-8 lg:ml-64">
+    <div className="w-full lg:ml-64">
+      <Container className="py-6 lg:py-8">
       <div className="max-w-4xl mx-auto">
         {/* Header */}
         <div className="text-center mb-8">
-          <h1 className="text-3xl font-bold mb-4">Complete Preparation Journey</h1>
-          <p className="text-lg text-muted-foreground mb-6">
+          <h1 className="text-2xl lg:text-3xl font-bold mb-4 text-foreground">Complete Preparation Journey</h1>
+          <p className="text-base lg:text-lg text-muted-foreground mb-6 px-4">
             Follow our comprehensive 4-step preparation process to ace your interviews
           </p>
           <div className="max-w-2xl mx-auto">
@@ -389,7 +390,8 @@ const CompletePreparation: React.FC = () => {
           </CardContent>
         </Card>
       </div>
-    </Container>
+      </Container>
+    </div>
   );
 };
 

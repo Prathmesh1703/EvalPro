@@ -23,12 +23,12 @@ const Header: React.FC = () => {
   return (
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <Container>
-        <div className="flex h-16 items-center justify-between">
+        <div className="flex h-16 items-center justify-between w-full">
           {/* Left side - Logo and Navigation */}
-          <div className="flex items-center space-x-8">
+          <div className="flex items-center space-x-4 lg:space-x-8 flex-shrink-0">
             <LogoContainer />
             
-            <nav className="hidden md:flex items-center space-x-6">
+            <nav className="hidden lg:flex items-center space-x-6">
               <Link 
                 to="/" 
                 className={`text-sm font-medium transition-colors hover:text-primary ${
@@ -58,7 +58,7 @@ const Header: React.FC = () => {
           </div>
 
           {/* Right side - Auth and Theme Toggle */}
-          <div className="flex items-center space-x-4">
+          <div className="flex items-center space-x-2 lg:space-x-4 flex-shrink-0">
             <ModeToggle />
             
             {isAuthenticated ? (

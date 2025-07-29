@@ -29,20 +29,21 @@ const Profile: React.FC = () => {
   ];
 
   return (
-    <Container className="py-8 lg:ml-64">
+    <div className="w-full lg:ml-64">
+      <Container className="py-6 lg:py-8">
       <div className="space-y-8">
         {/* Profile Header */}
-        <div className="flex items-start space-x-6">
+        <div className="flex flex-col sm:flex-row items-start space-y-4 sm:space-y-0 sm:space-x-6">
           <Avatar className="w-24 h-24">
             <AvatarImage src={user?.picture} alt={user?.name} />
             <AvatarFallback className="text-2xl">
               <User className="h-12 w-12" />
             </AvatarFallback>
           </Avatar>
-          <div className="flex-1 space-y-4">
+          <div className="flex-1 space-y-4 w-full sm:w-auto">
             <div>
-              <h1 className="text-3xl font-bold">{user?.name}</h1>
-              <p className="text-muted-foreground flex items-center mt-1">
+              <h1 className="text-2xl lg:text-3xl font-bold text-foreground">{user?.name}</h1>
+              <p className="text-muted-foreground flex items-center mt-1 text-sm lg:text-base">
                 <Mail className="h-4 w-4 mr-2" />
                 {user?.email}
               </p>
@@ -170,7 +171,8 @@ const Profile: React.FC = () => {
           </CardContent>
         </Card>
       </div>
-    </Container>
+      </Container>
+    </div>
   );
 };
 

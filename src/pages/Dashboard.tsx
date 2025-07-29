@@ -65,7 +65,8 @@ const Dashboard: React.FC = () => {
   ];
 
   return (
-    <Container className="py-8 lg:ml-64">
+    <div className="w-full lg:ml-64">
+      <Container className="py-6 lg:py-8">
       <div className="space-y-8">
         {/* Welcome Section */}
         <div>
@@ -187,7 +188,8 @@ const Dashboard: React.FC = () => {
           </Card>
         </div>
       </div>
-    </Container>
+      </Container>
+    </div>
   );
 };
 
